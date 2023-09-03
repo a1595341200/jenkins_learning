@@ -22,7 +22,7 @@ pipeline{
     }
     post{
         always{
-            sh 'pwd'
+            sh 'pwd && ls'
             echo "========always========"
             deleteDir()
         }
