@@ -9,7 +9,7 @@ pipeline{
             post{
                 always{
                     echo "========always========"
-                    cleanup()
+                    deleteDir()
                 }
                 success{
                     echo "========A executed successfully========"
