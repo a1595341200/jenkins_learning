@@ -12,6 +12,7 @@ pipeline{
                 }
                 success{
                     echo "========A executed successfully========"
+                    sh 'ls && cd build && ./jinkens_c++'
                 }
                 failure{
                     echo "========A execution failed========"
