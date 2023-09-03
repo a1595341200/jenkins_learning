@@ -13,6 +13,7 @@ pipeline{
                 success{
                     echo "========A executed successfully========"
                     sh 'cd build &&./jinkens_c++'
+                    archiveArtifacts artifacts: 'build/jinkens_c++', fingerprint: true
                 }
                 failure{
                     echo "========A execution failed========"
