@@ -4,7 +4,7 @@ pipeline{
         stage("A"){
             steps{
                 echo "========executing A========"
-                sh 'cd build && cmake .. && make'
+                sh 'ls && cd build && cmake .. && make'
             }
             post{
                 always{
