@@ -9,11 +9,10 @@ pipeline{
             post{
                 always{
                     echo "========always========"
-                    deleteDir()
                 }
                 success{
                     echo "========A executed successfully========"
-                    sh 'ls && cd build && ./jinkens_c++'
+                    sh './jinkens_c++'
                 }
                 failure{
                     echo "========A execution failed========"
@@ -23,7 +22,9 @@ pipeline{
     }
     post{
         always{
+            sh 'pwd'
             echo "========always========"
+            deleteDir()
         }
         success{
             echo "========pipeline executed successfully ========"
